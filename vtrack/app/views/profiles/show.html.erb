@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @profile.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @profile.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @profile.model %>
+</p>
+
+<p>
+  <strong>Kilometers:</strong>
+  <%= @profile.kilometers %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
