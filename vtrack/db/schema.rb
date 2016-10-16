@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015232149) do
+ActiveRecord::Schema.define(version: 20161015235235) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "kilometers"
+    t.date     "date"
+    t.text     "description"
+    t.integer  "profile_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["profile_id"], name: "index_events_on_profile_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "year"
